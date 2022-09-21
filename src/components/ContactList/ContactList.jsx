@@ -1,14 +1,16 @@
-import React from 'react';
-import { Loader } from '../Loader/Loader';
 import { useSelector } from 'react-redux';
-import { filterSlice, contactsSlice } from '../../redux';
-import { ContactsItem } from '../ContactsItem/ContactsItem';
-import css from './ContactList.module.css';
 
-export const ContactList = () => {
+import style from './ContactList.module.css';
+import { Loader } from 'components/Loader/Loader';
+import { filterSlice, contactsSlice } from 'redux/contacts';
+import ContactsItem from 'components/ContactsItem';
+
+function ContactList() {
   const { data: contacts, isLoading: loadingList } =
     contactsSlice.useFetchContactsQuery();
   const filterValue = useSelector(filterSlice.getFilter);
+
+  // console.log(contacts.length);
 
   const getContactsFilter = () => {
     const normalizedFilter = filterValue.toLocaleLowerCase();
@@ -25,7 +27,7 @@ export const ContactList = () => {
     <div>
       {loadingList && <Loader />}
       {contacts && (
-        <ol className={css.contacts}>
+        <ol className={style.contacts}>
           {contactsFilter.map(contact => (
             <ContactsItem key={contact.id} contact={contact} />
           ))}
@@ -33,6 +35,6 @@ export const ContactList = () => {
       )}
     </div>
   );
-};
+}
 
 export default ContactList;

@@ -1,9 +1,9 @@
 import { Oval } from 'react-loader-spinner';
-import css from './Loader.module.css';
+import style from './Loader.module.css';
 
 export const LoaderMini = () => {
   return (
-    <div className={css.loader}>
+    <div className={style.loader}>
       <Oval
         ariaLabel="loading-indicator"
         height={18}
@@ -18,7 +18,7 @@ export const LoaderMini = () => {
 
 export const Loader = () => {
   return (
-    <div className={css.loader}>
+    <div className={style.loader}>
       <Oval
         ariaLabel="loading-indicator"
         height={40}
