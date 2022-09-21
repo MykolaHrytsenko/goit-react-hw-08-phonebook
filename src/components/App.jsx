@@ -9,19 +9,9 @@ import { Loader } from './Loader/Loader';
 import PrivateRoute from './Routes/PrivateRoute';
 import PublicRoute from './Routes/PublicRoute';
 
-const LoginView = lazy(() =>
-  import('pages/LoginView/LoginView' /* webpackChunkName: "login-view" */)
-);
-const RegisterView = lazy(() =>
-  import(
-    'pages/RegisterView/RegisterView' /* webpackChunkName: "register-view" */
-  )
-);
-const ContactsView = lazy(() =>
-  import(
-    'pages/ContactsView/ContactsView' /* webpackChunkName: "contacts-view" */
-  )
-);
+const LoginView = lazy(() => import('pages/LoginView/LoginView'));
+const RegisterView = lazy(() => import('pages/RegisterView/RegisterView'));
+const ContactsView = lazy(() => import('pages/ContactsView/ContactsView'));
 
 function App() {
   const dispatch = useDispatch();

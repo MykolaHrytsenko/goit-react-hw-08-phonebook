@@ -9,7 +9,7 @@ const AppBar = () => {
   return (
     <header className={style.header}>
       <p className={style.link}>
-        <span className={style.phone}>Phone</span>book
+        <span className={style.phone}>Phonebook</span>
       </p>
       {isLoggedIn ? <Navigation /> : <NavAuth />}
     </header>

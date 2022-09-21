@@ -1,7 +1,3 @@
-// import Form from 'components/Form';
-// import Filter from 'components/Filter';
-// import ContactList from 'components/ContactList';
-
 import ContactList from 'components/ContactList';
 import Form from 'components/Form';
 import Filter from 'components/Filter';

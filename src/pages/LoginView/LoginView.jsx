@@ -9,10 +9,6 @@ const LoginView = () => {
 
   const [password, setPassword] = useState('');
 
-  // useEffect(() => {
-  //   localStorage.setItem('user', JSON.stringify(email));
-  // }, [email]);
-
   const handleChange = evt => {
     const { name, value } = evt.currentTarget;
     switch (name) {

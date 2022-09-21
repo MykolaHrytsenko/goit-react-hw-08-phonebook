@@ -1,11 +1,9 @@
 .label {
   display: flex;
   flex-direction: column;
-  /* justify-content: center; */
   margin: 0 auto 20px;
   color: #757575;
-    width: 350px;
-    /* align-items: center; */
+  width: 350px;
 }
 
 .input {

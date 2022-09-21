@@ -1,16 +1,13 @@
 import { useSelector } from 'react-redux';
-
-import style from './ContactList.module.css';
 import { Loader } from 'components/Loader/Loader';
 import { filterSlice, contactsSlice } from 'redux/contacts';
 import ContactsItem from 'components/ContactsItem';
+import style from './ContactList.module.css';
 
 function ContactList() {
   const { data: contacts, isLoading: loadingList } =
     contactsSlice.useFetchContactsQuery();
   const filterValue = useSelector(filterSlice.getFilter);
-
-  // console.log(contacts.length);
 
   const getContactsFilter = () => {
     const normalizedFilter = filterValue.toLocaleLowerCase();
